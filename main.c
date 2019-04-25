@@ -29,16 +29,17 @@ void Lectura_Archivo(void){
       /*Casteo Matriz dinamica*/
       Matriz = (int **)malloc(n_nodos*sizeof(int));
 
-      for (i=0;i<n_nodos;i++)
+      for (i=0;i<n_nodos;i++){
         Matriz[i] = (int *) malloc (n_nodos*sizeof(int));
+      }
 
-        if ( Matriz == NULL ){
-          printf("NO hay suficiente espacio en memoria\n\n");
-          condicion++;
-        }
-        else{
-          printf("Se asigno memoria\n\n");
-        }
+      if ( Matriz == NULL ){
+        printf("NO hay suficiente espacio en memoria\n\n");
+        condicion++;
+      }
+      else{
+        printf("Se asigno memoria\n\n");
+      }
       /*Casteo Matriz dinamica*/
 
       /*Se carga la matriz*/
@@ -50,7 +51,7 @@ void Lectura_Archivo(void){
       printf("No se encontr%c el archivo.\n\n", 162);
       condicion++;
     }
-
+    condicion++;
   }
 
 }
